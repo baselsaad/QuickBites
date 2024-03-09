@@ -1,3 +1,2 @@
-# QuickBites
- 
-test2
+# Quickbite
+A JavaScript project
