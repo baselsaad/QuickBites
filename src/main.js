@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable max-len */
 // 'use strict';
 
 // function counter() {
@@ -9,3 +11,4 @@
 // }
 
 // counter();
+

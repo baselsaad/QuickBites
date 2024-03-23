@@ -26,6 +26,10 @@ public class Reservation {
         this.client = client;
     }
 
+    public Reservation() {
+
+    }
+
     public String getBookingId() {
         return bookingId;
     }

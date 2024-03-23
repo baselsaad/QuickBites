@@ -7,7 +7,7 @@
     <title> | Delicious Food Magic</title>
     <link rel="stylesheet" href="public/style.css">
     <link rel="shortcut icon" href="public/favicon.ico" type="image/x-icon">
-    <script src="js/main.js"></script>
+    <script src="main.js"></script>
 </head>
 
 <body>
@@ -242,24 +242,24 @@
     
       <section id="login" style="display:flex; align-items:center; justify-content:center;">
         
-        <link rel="stylesheet" href="../css/loginstyle.css">
+        <link rel="stylesheet" href="css/loginstyle.css">
         <div class="login-page">
             
           <div class="form">
-            <img src="../html/public/closebtn.png" alt="close" id="login-close" class="close" >
-            <form class="register-form" method="POST">
+            <img src="public/closebtn.png" alt="close" id="login-close" class="close" >
+            <form id="registerForm" class="register-form" method="POST">
               <h2>Register</h2>
-              <input type="text" placeholder="Full Name " required/>
-              <input type="text" placeholder="Username" required/>
-              <input type="email" placeholder="Email " required/>
-              <input type="password" placeholder="Password" required/>
-              <a class="btn" href="#">
+              <input id="fullName" type="text" placeholder="Full Name " required/>
+              <input id="username" type="text" placeholder="Username" required/>
+              <input id="email" type="email" placeholder="Email " required/>
+              <input id="password" type="password" placeholder="Password" required/>
+              <button id="register-btn" class="btn" href="#">
                 <span></span>
                 <span></span>
                 <span></span>
                 <span></span>
                 Create
-              </a>
+              </button>
               <p class="message">Already registered? <a href="#">Sign In</a></p>
             </form>
             <form class="login-form" method="post">
@@ -278,7 +278,7 @@
           </div>
         </div>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- download the file -->
-        <script src="../js/login.js"></script>
+        <script src="js/login.js"></script>
         </section>
     </div>
 
