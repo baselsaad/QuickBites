@@ -6,6 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Webleb</title>
       <link rel="stylesheet" href="../css/loginstyle.css">
+      
   </head>
   <body style="display:flex; align-items:center; justify-content:center;">
    
@@ -13,19 +14,19 @@
     
     <div class="form">
       <img src="../html/public/closebtn.png" alt="close" class="close" >
-      <form class="register-form" method="POST">
+      <form id="registerForm" class="register-form" action="http://localhost:8081/v1/signin" method="POST">
         <h2>Register</h2>
-        <input type="text" placeholder="Full Name " required/>
-        <input type="text" placeholder="Username" required/>
-        <input type="email" placeholder="Email " required/>
-        <input type="password" placeholder="Password" required/>
-        <a class="btn" href="#">
+        <input type="text" name="fullName" placeholder="Full Name " required/>
+        <input id="Username" name="username" type="text" placeholder="Username" required/>
+        <input id="email" name="email" type="email" placeholder="Email " required/>
+        <input id="password" name="password" type="password" placeholder="Password" required/>
+        <button id="register-btn" class="btn" href="#">
           <span></span>
           <span></span>
           <span></span>
           <span></span>
           Create
-        </a>
+        </button>
         <p class="message">Already registered? <a href="#">Sign In</a></p>
       </form>
       <form class="login-form" method="post">
@@ -43,7 +44,7 @@
       </form>
     </div>
   </div>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="../js/login.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </body>
   </html>

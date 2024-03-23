@@ -18,7 +18,7 @@ public class ClientController {
         this.clientService = clientService;
     }
 
-    @PostMapping(value = "/login")
+    @PostMapping(value = "/signin")
     public void createClient(@RequestBody Client client){
        clientService.createClient(client);
     }

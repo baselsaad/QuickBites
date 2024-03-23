@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/style.9cf674f6.css">
     <link rel="shortcut icon" href="/favicon.62acfe51.ico" type="image/x-icon">
     <script src="/main.1f19ae8e.js"></script>
-<script src="/style.9cf674f6.js"></script></head>
+<script src="/style.9cf674f6.js"></script><script src="/loginstyle.89a34911.js"></script></head>
 
 <body>
     <header class="header">
@@ -28,7 +28,7 @@
                     <li><a href="#reservations">Reservations</a></li>
                     <li><a href="#testimonials">Testimonials</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <li><a href="#login">Login</a></li>
+                    <li><a href="#" id="login-link">Login</a></li>
                     
                   </ul>
                   
@@ -108,7 +108,6 @@
             </div>
         </section>
     </div>
-
 
     <div class="container dessert-container">
         <section class="dessert">
@@ -194,8 +193,6 @@
         </div>
       </section>
 
-
-
     <section id="reservations" class="reservations">
         <div class="reservation-form">
           <h2>Make a Reservation</h2>
@@ -214,7 +211,6 @@
           </form>
         </div>
       </section>
-
 
       <section id="contact" class="contact">
         <div class="contact-container">
@@ -241,8 +237,50 @@
           </form>
         </div>
       </section>
-
-
+    
+      <div class="popup">
+    
+      <section id="login" style="display:flex; align-items:center; justify-content:center;">
+        
+        <link rel="stylesheet" href="/loginstyle.89a34911.css">
+        <div class="login-page">
+            
+          <div class="form">
+            <img src="/closebtn.0edc7047.png" alt="close" id="login-close" class="close">
+            <form id="registerForm" class="register-form" method="POST">
+              <h2>Register</h2>
+              <input id="fullName" type="text" placeholder="Full Name " required="">
+              <input id="username" type="text" placeholder="Username" required="">
+              <input id="email" type="email" placeholder="Email " required="">
+              <input id="password" type="password" placeholder="Password" required="">
+              <button id="register-btn" class="btn" href="#">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Create
+              </button>
+              <p class="message">Already registered? <a href="#">Sign In</a></p>
+            </form>
+            <form class="login-form" method="post">
+              <h2> Login</h2>
+              <input type="text" placeholder="Username" required="">
+              <input type="password" placeholder="Password" required="">
+              <a class="btn" href="#">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Sign in
+              </a>
+              <p class="message">Not registered? <a href="#">Create an account</a></p>
+            </form>
+          </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- download the file -->
+        <script src="/login.1860b95e.js"></script>
+        </section>
+    </div>
 
     <footer class="footer">
         <div class="footer-content">
