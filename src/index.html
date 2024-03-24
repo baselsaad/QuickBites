@@ -260,19 +260,19 @@
                 <span></span>
                 Create
               </button>
-              <p class="message">Already registered? <a href="#">Sign In</a></p>
+              <p class="message">Already registered? <a href="#login">Sign In</a></p>
             </form>
-            <form class="login-form" method="post">
-              <h2></i> Login</h2>
-              <input type="text" placeholder="Username" required />
-              <input type="password" placeholder="Password" required/>
-              <a class="btn" href="#">
+            <form id="loginForm" class="login-form">
+              <h2 id="login-header"></i> Login</h2>
+              <input id="login-username" type="text" placeholder="Username" required />
+              <input id="login-password" type="password" placeholder="Password" required/>
+              <button id="login-btn" class="btn" type="submit" href="#">
                 <span></span>
                 <span></span>
                 <span></span>
                 <span></span>
                 Sign in
-              </a>
+              </button>
               <p class="message">Not registered? <a href="#">Create an account</a></p>
             </form>
           </div>

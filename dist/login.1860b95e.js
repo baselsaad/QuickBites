@@ -215,6 +215,51 @@ registerForm.addEventListener('submit', /*#__PURE__*/function () {
 }());
 
 //------------------------login------------------------------------
+document.addEventListener('DOMContentLoaded', function () {
+  var loginForm = document.getElementById('loginForm');
+  loginForm.addEventListener('submit', /*#__PURE__*/function () {
+    var _ref2 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2(event) {
+      var username, password;
+      return _regeneratorRuntime().wrap(function _callee2$(_context2) {
+        while (1) switch (_context2.prev = _context2.next) {
+          case 0:
+            event.preventDefault();
+            username = document.getElementById('login-username').value;
+            password = document.getElementById('login-password').value;
+            fetch('http://localhost:8081/v1/users/' + username).then(function (response) {
+              if (!response.ok) {
+                throw new Error('Failed to fetch user data');
+              }
+              return response.json();
+            }).then(function (user) {
+              // Check if user exists and password matches
+              if (user && user.userPassword === password) {
+                // Handle successful login
+                console.log('Login successful:', user);
+                document.getElementById('login-link').textContent = user.username + " profile";
+                loginForm.style.display = 'none';
+                // Redirect to another page or do whatever you need after successful login
+              } else {
+                // Handle invalid username or password
+                console.error('Invalid username or password');
+                alert('Invalid username or password. Please try again.');
+              }
+            }).catch(function (error) {
+              // Handle login error
+              console.error('Login error:', error);
+              alert('Login failed. Please try again.');
+            });
+          case 4:
+          case "end":
+            return _context2.stop();
+        }
+      }, _callee2);
+    }));
+    return function (_x2) {
+      return _ref2.apply(this, arguments);
+    };
+  }());
+});
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -240,7 +285,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59689" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54909" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

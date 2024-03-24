@@ -22,7 +22,7 @@ public class ClientController {
     public void createClient(@RequestBody Client client){
        clientService.createClient(client);
     }
-    @GetMapping(value = "/Client/username/{username}")
+    @GetMapping(value = "/users/{username}")
     public Client getClientByUsername(@PathVariable String username){
 
        return clientService.getClientByUsername(username);
