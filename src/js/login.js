@@ -64,6 +64,42 @@ registerForm.addEventListener('submit', async (event) => {
 });
 
 //------------------------login------------------------------------
+document.addEventListener('DOMContentLoaded', function() {
+const loginForm = document.getElementById('loginForm');
+
+loginForm.addEventListener('submit', async (event) => {
+  event.preventDefault();
+    var username = document.getElementById('login-username').value;
+    var password = document.getElementById('login-password').value;
+    
+    fetch('http://localhost:8081/v1/users/' + username)
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Failed to fetch user data');
+        }
+        return response.json();
+    })
+    .then(user => {
+        // Check if user exists and password matches
+        if (user && user.userPassword === password) {
+            // Handle successful login
+            console.log('Login successful:', user);
+            document.getElementById('login-link').textContent = user.username + " profile";
+            loginForm.style.display = 'none';
+            // Redirect to another page or do whatever you need after successful login
+        } else {
+            // Handle invalid username or password
+            console.error('Invalid username or password');
+            alert('Invalid username or password. Please try again.');
+        }
+    })
+    .catch(error => {
+        // Handle login error
+        console.error('Login error:', error);
+        alert('Login failed. Please try again.');
+    });
 
 
+});
 
+});
