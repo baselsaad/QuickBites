@@ -183,6 +183,11 @@ h2{
   cursor: pointer;
   background-color: white;
 }
-
+.popup-content {
+  text-align: center;
+}
+#profileInfo {
+  /* Style profile information here */
+}
 
 /*# sourceMappingURL=/loginstyle.89a34911.css.map */
