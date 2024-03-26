@@ -84,7 +84,7 @@ loginForm.addEventListener('submit', async (event) => {
         if (user && user.userPassword === password) {
             // Handle successful login
             console.log('Login successful:', user);
-            document.getElementById('login-link').textContent = user.username + " profile";
+            document.getElementById('login-link').textContent = user.username;
             loginForm.style.display = 'none';
             // Redirect to another page or do whatever you need after successful login
         } else {
