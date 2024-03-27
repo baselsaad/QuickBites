@@ -3,7 +3,6 @@ const reservationForm = document.getElementById('reservationForm');
 
 reservationForm.addEventListener('submit', async (event) => {
 event.preventDefault();
-alert("reserv")
 let username = document.getElementById('login-link').textContent
 console.log(username) 
 var email = document.getElementById('reservation-email').value
@@ -19,7 +18,9 @@ await fetch('http://localhost:8081/v1/users/' + username)
         if (user && user.clientEmail === email) {
             // Handle successful login
             console.log('Login successful:', user);
-            document.getElementById('reservation-btn').textContent = "Edit your date";
+          //var btn = document.getElementById('reservation-btn').textContent = "submited";
+          var btn = document.getElementById('reservation-btn')
+          btn.style.display = "none"
            // loginForm.style.display = 'none';
             // Redirect to another page or do whatever you need after successful login
         } else {
@@ -43,6 +44,13 @@ await fetch('http://localhost:8081/v1/users/' + username)
              console.log("here is the response res from fetch: " + reservation)
             if (response.ok) {
               console.log("here is the response res: " + reservation) 
+              var profileInfo = document.getElementById("profile-info");
+
+              // Populate profile information
+              profileInfo.innerHTML = "<p>Name: " + client.username + "</p>" +
+                            "<p>Email: " + client.clientEmail + "</p>" +
+                            "<p>date: "  + date + "</p>" +
+                            "<p>time: "  + time + "</p>"
               // Handle successful registration (e.g., success message, redirect)
              // alert('Registration successful!');
              // window.location.href = '/login';
@@ -59,10 +67,9 @@ await fetch('http://localhost:8081/v1/users/' + username)
         const response = await fetch('http://localhost:8081/v1/book/' + username +'/' + res.bookingId, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(res),
+            body: JSON.stringify(),
           });
-           console.log(res.client.username)
-           console.log(response.json())
+           
           if (response.ok) {
               
             // Handle successful registration (e.g., success message, redirect)
@@ -74,7 +81,7 @@ await fetch('http://localhost:8081/v1/users/' + username)
             // Display error message based on errorData (e.g., username taken)
           }
         
-           return response.json();
+           //return response.json();
 
     })
     .catch(error => {

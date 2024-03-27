@@ -130,11 +130,10 @@ reservationForm.addEventListener('submit', /*#__PURE__*/function () {
       while (1) switch (_context3.prev = _context3.next) {
         case 0:
           event.preventDefault();
-          alert("reserv");
           username = document.getElementById('login-link').textContent;
           console.log(username);
           email = document.getElementById('reservation-email').value;
-          _context3.next = 7;
+          _context3.next = 6;
           return fetch('http://localhost:8081/v1/users/' + username).then(function (response) {
             if (!response.ok) {
               throw new Error('Failed to fetch user data');
@@ -145,7 +144,9 @@ reservationForm.addEventListener('submit', /*#__PURE__*/function () {
             if (user && user.clientEmail === email) {
               // Handle successful login
               console.log('Login successful:', user);
-              document.getElementById('reservation-btn').textContent = "Edit your date";
+              //var btn = document.getElementById('reservation-btn').textContent = "submited";
+              var btn = document.getElementById('reservation-btn');
+              btn.style.display = "none";
               // loginForm.style.display = 'none';
               // Redirect to another page or do whatever you need after successful login
             } else {
@@ -156,7 +157,7 @@ reservationForm.addEventListener('submit', /*#__PURE__*/function () {
             return user;
           }).then( /*#__PURE__*/function () {
             var _ref2 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(client) {
-              var time, date, reservation, response, errorData;
+              var time, date, reservation, response, profileInfo, errorData;
               return _regeneratorRuntime().wrap(function _callee$(_context) {
                 while (1) switch (_context.prev = _context.next) {
                   case 0:
@@ -181,6 +182,8 @@ reservationForm.addEventListener('submit', /*#__PURE__*/function () {
                     console.log("here is the response res from fetch: " + reservation);
                     if (response.ok) {
                       console.log("here is the response res: " + reservation);
+                      profileInfo = document.getElementById("profile-info"); // Populate profile information
+                      profileInfo.innerHTML = "<p>Name: " + client.username + "</p>" + "<p>Email: " + client.clientEmail + "</p>" + "<p>date: " + date + "</p>" + "<p>time: " + time + "</p>";
                       // Handle successful registration (e.g., success message, redirect)
                       // alert('Registration successful!');
                       // window.location.href = '/login';
@@ -213,12 +216,10 @@ reservationForm.addEventListener('submit', /*#__PURE__*/function () {
                       headers: {
                         'Content-Type': 'application/json'
                       },
-                      body: JSON.stringify(res)
+                      body: JSON.stringify()
                     });
                   case 2:
                     response = _context2.sent;
-                    console.log(res.client.username);
-                    console.log(response.json());
                     if (response.ok) {
 
                       // Handle successful registration (e.g., success message, redirect)
@@ -228,8 +229,9 @@ reservationForm.addEventListener('submit', /*#__PURE__*/function () {
                     } else {
                       errorData = response.json(); // Display error message based on errorData (e.g., username taken)
                     }
-                    return _context2.abrupt("return", response.json());
-                  case 7:
+
+                    //return response.json();
+                  case 4:
                   case "end":
                     return _context2.stop();
                 }
@@ -243,7 +245,7 @@ reservationForm.addEventListener('submit', /*#__PURE__*/function () {
             console.error('Login error:', error);
             alert('Login failed. Please try again.');
           });
-        case 7:
+        case 6:
         case "end":
           return _context3.stop();
       }
@@ -278,7 +280,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55398" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55705" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

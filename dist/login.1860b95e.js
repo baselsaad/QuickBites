@@ -236,7 +236,7 @@ document.addEventListener('DOMContentLoaded', function () {
               if (user && user.userPassword === password) {
                 // Handle successful login
                 console.log('Login successful:', user);
-                document.getElementById('login-link').textContent = user.username + " profile";
+                document.getElementById('login-link').textContent = user.username;
                 loginForm.style.display = 'none';
                 // Redirect to another page or do whatever you need after successful login
               } else {
@@ -285,7 +285,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55398" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55705" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
