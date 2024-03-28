@@ -183,7 +183,7 @@ body {
   font-weight: var(--weight-regular);
   line-height: var(--lineHeight-5);
   overflow: auto;
-  height: 300vh;
+  height: 150vh;
 }
 
 body.loaded { overflow: overlay; }
