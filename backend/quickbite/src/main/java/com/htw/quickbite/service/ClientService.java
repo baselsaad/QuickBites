@@ -39,8 +39,18 @@ public class ClientService {
         return clientRepository.findAll();
     }
 
-    public void bookTable(Reservation reservation){
-       reservationRepository.save(reservation);
+    public void bookTable(String resID, String username){
+        Client client = clientRepository.findAll().stream().filter(a -> a.getUsername().equals(username)).findFirst().orElse(null);
+       Reservation reservation = reservationRepository.findAll().stream().filter(a-> a.getBookingId().equals(resID)).findFirst().orElse(null);
+        if(client != null){
+         client.setReservation(reservation);
+         clientRepository.save(client);
+         reservation.setClient(client);
+         reservationRepository.save(reservation);
+     } else {
+         System.out.println("error");
+     }
+
     }
 
 

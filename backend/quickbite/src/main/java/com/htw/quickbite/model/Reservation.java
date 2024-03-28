@@ -1,5 +1,6 @@
 package com.htw.quickbite.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 @Entity
@@ -14,16 +15,20 @@ public class Reservation {
     private boolean available;
     @Column
     private String date;
+    @Column
+    private String time;
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "client_id", referencedColumnName = "id")
+    @JsonIgnore
     private Client client;
 
-    public Reservation(String bookingId, int tableNr, boolean available, String date, Client client) {
+    public Reservation(String bookingId, int tableNr, boolean available, String date,String time, Client client) {
         this.bookingId = bookingId;
         this.tableNr = tableNr;
         this.available = available;
         this.date = date;
         this.client = client;
+        this.time = time;
     }
 
     public Reservation() {
@@ -60,6 +65,14 @@ public class Reservation {
 
     public void setDate(String date) {
         this.date = date;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
     }
 
     public Client getClient() {
