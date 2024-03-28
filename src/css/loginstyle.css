@@ -1,4 +1,31 @@
 @import url(https://fonts.googleapis.com/css?family=Poppins:300);
+
+:root {
+
+  /**
+   * COLORS
+   */
+
+  --gold-crayola: #e4c590;
+  --gold-crayola2: hsl(38, 90%, 92%);
+  --gold-crayola3: hsl(39, 100%, 87%);
+  --quick-silver: hsla(0, 0%, 65%, 1);
+  --davys-grey: hsla(30, 3%, 34%, 1);
+  --smoky-black-1: hsla(40, 12%, 5%, 1);
+  --smoky-black-2: hsla(30, 8%, 5%, 1);
+  --smoky-black-3: hsla(0, 3%, 7%, 1);
+  --eerie-black-1: hsla(210, 4%, 9%, 1);
+  --eerie-black-2: hsla(210, 4%, 11%, 1);
+  --eerie-black-3: #141515;
+  --eerie-black-4: hsla(0, 0%, 13%, 1);
+  --white: hsla(0, 0%, 100%, 1);
+  --white-alpha-20: hsla(0, 0%, 100%, 0.2);
+  --white-alpha-10: hsla(0, 0%, 100%, 0.1);
+  --black: hsla(0, 0%, 0%, 1);
+  --black-alpha-80: hsla(0, 0%, 0%, 0.8);
+  --black-alpha-15: hsla(0, 0%, 0%, 0.15);
+}
+
 html {
  height: 100%;
 }
@@ -6,7 +33,7 @@ body{
  margin:0;
  padding:0;
  font-family: sans-serif;
- background: linear-gradient(#30142b, #2772a1);
+ background: linear-gradient(#141515, #e4c590);
 }
 .login-page {
   width: 400px;
@@ -51,7 +78,7 @@ h2{
   font-size: 12px;
 }
 .form .message a {
-  color: #289bb8;
+  color: #e4c590;
   text-decoration: none;
 }
 .form .register-form {
@@ -61,7 +88,7 @@ h2{
   position: relative;
   display: inline-block;
   padding: 10px 20px;
-  color: #289bb8;
+  color: #e4c590;
   background-color: transparent;
   font-size: 16px;
   text-decoration: none;
@@ -71,13 +98,13 @@ h2{
   letter-spacing: 2px
 }
 .btn:hover {
-  background: #289bb8;
-  color: #fff;
+  background: #e4c590;
+  color: #201e18;
   border-radius: 5px;
-  box-shadow: 0 0 5px #289bb8,
-              0 0 25px #289bb8,
-              0 0 50px #289bb8,
-              0 0 100px #289bb8;
+  box-shadow: 0 0 5px #e4c590,
+              0 0 25px #e8c68b,
+              0 0 50px #ddb571,
+              0 0 100px #e3b361;
 }
 
 .btn span {
@@ -90,7 +117,7 @@ h2{
   left: -100%;
   width: 100%;
   height: 2px;
-  background: linear-gradient(90deg, transparent, #289bb8);
+  background: linear-gradient(90deg, transparent, #e4c590);
   animation: btn-anim1 1s linear infinite;
 }
 
@@ -108,7 +135,7 @@ h2{
   right: 0;
   width: 2px;
   height: 100%;
-  background: linear-gradient(180deg, transparent, #289bb8);
+  background: linear-gradient(180deg, transparent, #e4c590);
   animation: btn-anim2 1s linear infinite;
   animation-delay: .25s
 }
@@ -127,7 +154,7 @@ h2{
   right: -100%;
   width: 100%;
   height: 2px;
-  background: linear-gradient(270deg, transparent, #289bb8);
+  background: linear-gradient(270deg, transparent, #e4c590);
   animation: btn-anim3 1s linear infinite;
   animation-delay: .5s
 }
@@ -146,7 +173,7 @@ h2{
   left: 0;
   width: 2px;
   height: 100%;
-  background: linear-gradient(360deg, transparent, #289bb8);
+  background: linear-gradient(360deg, transparent, #e4c590);
   animation: btn-anim4 1s linear infinite;
   animation-delay: .75s
 }

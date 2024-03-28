@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> | Delicious Food Magic</title>
     <link rel="stylesheet" href="public/style.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="shortcut icon" href="public/favicon.ico" type="image/x-icon">
     <script src="main.js"></script>
 </head>
@@ -25,7 +26,7 @@
                     <li><a href="#home-container">Home</a></li>
                     <li><a href="#menu">Menu</a></li> 
                     <li><a href="#gallery">Gallery</a></li>
-                    <li><a href="#reservations">Reservations</a></li>
+                    <li><a href="html/reservation.html">Reservations</a></li>
                     <li><a href="#testimonials">Testimonials</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <li><a href="#" id="login-link">Login</a></li>
@@ -42,6 +43,9 @@
 
                     Relish the Speedy, Wholesome Delights at QuickBites.</p>
                 <p>Savor the Flavor at QuickBites</p>
+                <a href="html/reservation.html">
+                  <button id="BOOK">reserve your table now!</button>
+                </a>
             </div>
         </section>
     </header>
@@ -193,25 +197,6 @@
         </div>
       </section>
 
-    <section id="reservations" class="reservations">
-        <div class="reservation-form">
-          <h2>Make a Reservation</h2>
-          <form id="reservationForm">
-            <div class="input-group">
-              <input id="reservation-name" type="text" name="name" placeholder="Your Name" required>
-              <input id="reservation-email" type="email" name="email" placeholder="Your Email" required>
-            </div>
-            <div class="input-group">
-              <input type="tel" name="phone" placeholder="Phone Number" required>
-              <input id="date" type="date" name="date" required>
-              <input id="time" type="time" name="time" required>
-            </div>
-            <textarea name="message" placeholder="Additional Message" rows="5"></textarea>
-            <button id="reservation-btn" type="submit">Submit</button>
-          </form>
-        </div>
-        <div id="profile-info"></div>
-      </section>
 
       <section id="contact" class="contact">
         <div class="contact-container">

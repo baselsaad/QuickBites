@@ -1,5 +1,109 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400;1,500&display=swap');
 
+
+:root {
+
+    /**
+     * COLORS
+     */
+  
+    --gold-crayola: hsl(38, 61%, 73%);
+    --gold-crayola2: hsl(38, 90%, 92%);
+    --gold-crayola3: hsl(39, 100%, 87%);
+    --quick-silver: hsla(0, 0%, 65%, 1);
+    --davys-grey: hsla(30, 3%, 34%, 1);
+    --smoky-black-1: hsla(40, 12%, 5%, 1);
+    --smoky-black-2: hsla(30, 8%, 5%, 1);
+    --smoky-black-3: hsla(0, 3%, 7%, 1);
+    --eerie-black-1: hsla(210, 4%, 9%, 1);
+    --eerie-black-2: hsla(210, 4%, 11%, 1);
+    --eerie-black-3: hsla(180, 2%, 8%, 1);
+    --eerie-black-4: hsla(0, 0%, 13%, 1);
+    --white: hsla(0, 0%, 100%, 1);
+    --white-alpha-20: hsla(0, 0%, 100%, 0.2);
+    --white-alpha-10: hsla(0, 0%, 100%, 0.1);
+    --black: hsla(0, 0%, 0%, 1);
+    --black-alpha-80: hsla(0, 0%, 0%, 0.8);
+    --black-alpha-15: hsla(0, 0%, 0%, 0.15);
+  
+    /**
+     * GRADIENT COLOR
+     */
+  
+    --loading-text-gradient: linear-gradient(90deg, transparent 0% 16.66%, var(--smoky-black-3) 33.33% 50%,  transparent 66.66% 75%);
+    --gradient-1: linear-gradient(to top,hsla(0, 0%, 0%, 0.9),hsla(0, 0%, 0%, 0.7),transparent);
+  
+    /**
+     * TYPOGRAPHY
+     */
+  
+    /* font-family */
+    --fontFamily-forum: 'Forum', cursive;
+    --fontFamily-dm_sans: 'DM Sans', sans-serif;
+  
+    /* font-size */
+    --fontSize-display-1: calc(1.3rem + 6.7vw);
+    --fontSize-headline-1: calc(2rem + 2.5vw);
+    --fontSize-headline-2: calc(1.3rem + 2.4vw);
+    --fontSize-title-1: calc(1.6rem + 1.2vw);
+    --fontSize-title-2: 2.2rem;
+    --fontSize-title-3: 2.1rem;
+    --fontSize-title-4: calc(1.6rem + 1.2vw);
+    --fontSize-body-1: 2.4rem;
+    --fontSize-body-2: 1.6rem;
+    --fontSize-body-3: 1.8rem;
+    --fontSize-body-4: 1.6rem;
+    --fontSize-label-1: 1.4rem;
+    --fontSize-label-2: 1.2rem;
+  
+    /* font-weight */
+    --weight-regular: 400;
+    --weight-bold: 700;
+  
+    /* line-height */
+    --lineHeight-1: 1em;
+    --lineHeight-2: 1.2em;
+    --lineHeight-3: 1.5em;
+    --lineHeight-4: 1.6em;
+    --lineHeight-5: 1.85em;
+    --lineHeight-6: 1.4em;
+  
+    /* letter-spacing */
+    --letterSpacing-1: 0.15em;
+    --letterSpacing-2: 0.4em;
+    --letterSpacing-3: 0.2em;
+    --letterSpacing-4: 0.3em;
+    --letterSpacing-5: 3px;
+  
+    /**
+     * SPACING
+     */
+  
+    --section-space: 70px;
+  
+    /**
+     * SHADOW
+     */
+  
+    --shadow-1: 0px 0px 25px 0px hsla(0, 0%, 0%, 0.25);
+  
+    /**
+     * BORDER RADIUS
+     */
+  
+    --radius-24: 24px;
+    --radius-circle: 50%;
+  
+    /**
+     * TRANSITION
+     */
+  
+    --transition-1: 250ms ease;
+    --transition-2: 500ms ease;
+    --transition-3: 1000ms ease;
+  
+  }
+  
 *,
 *::after,
 *::before {
@@ -43,45 +147,40 @@ body {
     width: 0.4rem;
 }
 
-/* Track */
-::-webkit-scrollbar-track {
-    background: #ffe77b;
-}
 
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: #fdc0ff;
-}
 
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: #00d9ff;
-}
+::-webkit-scrollbar { width: 5px; }
+
+::-webkit-scrollbar-track { background-color: var(--smoky-black-1); }
+
+::-webkit-scrollbar-thumb { background-color: var(--gold-crayola); }
 
 /* utility class */
 .btn {
-    background-color: #ff2828c9;
+    background-color: var(--smoky-black-1);;
     padding: 10px 30px;
     border: none;
     border-radius: 20px;
-    color: white;
+    color: var(--gold-crayola2);
     font-weight: 300;
     font-size: 1rem;
     cursor: pointer;
 }
-
+#BOOK{
+    background-color: var(--gold-crayola);;
+    padding: 10px 30px;
+    border: none;
+    color: var(--black-alpha-80);
+    font-weight: 300;
+    font-size: 1rem;
+    cursor: pointer;
+}
 .btn:hover {
-    background-color: #ff0000;
+    background-color: hsl(38, 18%, 25%);
     transition: background-color 300ms ease-in-out;
 }
 
-.highlight {
-    color: #ff4646;
-}
 
-.text-gray {
-    color: #525252;
-}
 
 .container {
     width: 1024px;
@@ -92,7 +191,7 @@ body {
 .header {
     background: url('bg.jpg');
     background-size: cover;
-    min-height: 100vh;
+    min-height: 60vh;
     width: 100%;
 }
 
@@ -110,15 +209,14 @@ body {
     justify-content: space-between;
     height: 5rem;
     align-items: center;
-    padding: 0 1rem;
-    color: white;
+    padding: 0 30rem;
+    color: var(--gold-crayola2);
 }
 
 .logo {
     cursor: pointer;
-    color: red;
+    color: hsl(38, 61%, 73%);
     letter-spacing: 5px;
-    text-shadow: 2px 1px #ffffff, 2px 1px #ffffff;
 }
 
 .menu-items {
@@ -145,7 +243,7 @@ body {
 }
 
 .menu-items li a:hover {
-    color: rgb(255, 0, 0);
+    color: hsl(39, 100%, 87%);
     transition: color 300ms ease-in-out;
 }
 
@@ -153,7 +251,7 @@ body {
 /* home  */
 .home-container {
     /* width: 100vw; */
-    min-height: 100vh;
+    min-height: 60vh;
     display: flex;
     justify-content: center;
     align-items: start;
@@ -161,28 +259,29 @@ body {
 
 .home {
     /* width: 100%; */
-    color: rgb(255, 255, 255);
+    color: var(--gold-crayola2);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    padding-top: 3rem;
+    padding-top: 4rem;
 }
 
 .home h1 {
     font-size: 4rem;
+    
 }
 
 .home p {
     text-align: center;
-    text-shadow: 3px 2px 20px #000000, 3px 2px 20px #000000;
-    padding: 0 5rem;
+    padding: 8 5rem;
+    width: 60rem;
 }
 
 .food-container {
     width: 100%;
-    background: #ffdec0;
+    background: hsl(39, 100%, 87%);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -214,7 +313,7 @@ body {
     padding: 8px 20px;
     font-size: 1.5rem;
     background-color: white;
-    color: #ff4646;
+    color: hsl(38, 61%, 73%);
     border-radius: 50px;
 }
 
@@ -255,7 +354,7 @@ body {
 /* dessert  */
 .dessert-container {
     width: 100%;
-    background: #fdc0ff;
+    background: hsl(38, 61%, 73%);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -302,7 +401,7 @@ body {
 /* gallery  */
 .gallery-container {
     width: 100%;
-    background: #ffe77b;
+    background: url('resbg.png');
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -322,19 +421,20 @@ body {
 .gallery h1 {
     font-size: 2rem;
     font-weight: 400;
+    color: var(--gold-crayola);
 }
 
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 4rem;
     padding: 1rem 0;
 }
 
 .gallery-item {
     width: 100%;
     height: 250px;
-    border-radius: 20px;
+    border-radius: 40px;
     overflow: hidden;
 }
 
@@ -348,10 +448,14 @@ body {
 .gallery-item img:hover {
     transform: scale(1.1);
     transition: all 0.5s ease-in-out;
-
-
-
     
+}
+
+
+.text-gray {
+    font-weight: bold;
+    font-size: larger;
+    color: var(--gold-crayola);
 }
 
 
@@ -360,8 +464,8 @@ body {
 .testimonials {
     padding: 50px 0;
     text-align: center;
-    background-color: #070e16;
-    color: #fff;
+    background-color: var(--gold-crayola);
+    color: hsl(38, 18%, 25%);
   }
   
   .testimonials h2 {
@@ -377,8 +481,8 @@ body {
   
   .testimonial img {
     display: block;
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     margin: 0 auto 20px;
   }
@@ -396,7 +500,7 @@ body {
 
 /* footer  */
 .footer {
-    background: linear-gradient(105deg, #747474, rgb(54, 54, 54));
+    background: var(--eerie-black-1);
     padding-top: 80px;
     padding-bottom: 40px;
 }
@@ -444,12 +548,11 @@ body {
 
 
 
-button {
-    padding: 0;
-    border: none;
-    background-color: transparent;
-    -webkit-border-radius: 0;
-    border-radius: 0;
+button, input, optgroup, select, textarea {
+    font-family: inherit; 
+    font-size: 100%; 
+    line-height: 1.15; 
+    margin: 0; 
 }
 
 .social_profile {
@@ -491,75 +594,10 @@ button {
     font-size: 14px;
   }
 
-  /* reservations*/
-
-.reservations {
-    background-color: #411111;
-    padding: 50px 0;
-    text-align: center;
-    color: #ffffff;
-  }
-  
-  .reservation-form {
-    max-width: 600px; 
-    margin: 0 auto;
-    background-color: #333;
-    padding: 40px; 
-    border-radius: 15px; 
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-  }
-  
-  .reservation-form h2 {
-    color: #ff9f00;
-    font-size: 36px; 
-    margin-bottom: 30px; 
-  }
-  
-  .reservation-form form .input-group {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 30px; 
-  }
-  
-  .reservation-form form input,
-  .reservation-form form textarea {
-    flex: 1;
-    padding: 15px; 
-    border-radius: 8px; 
-    border: 2px solid #555;
-    font-size: 18px; 
-    color: #333;
-    background-color: #ddd;
-    transition: border-color 0.3s ease;
-  }
-  
-  .reservation-form form input:focus,
-  .reservation-form form textarea:focus {
-    border-color: #ff9f00;
-    background-color: #fff;
-    color: #111;
-  }
-  
-  .reservation-form form button {
-    display: block;
-    background-color: #ff9f00;
-    color: #fff;
-    padding: 20px 30px; 
-    border: none;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-    cursor: pointer;
-  }
-  
-  .reservation-form form button:hover {
-    background-color: #ff7f00;
-  }
 
  /* Contact Section*/
 .contact {
-    background-color: #333;
+    background-color: var(--eerie-black-4);
     padding: 80px 0; 
     text-align: center;
     color: #fff;
@@ -609,11 +647,9 @@ button {
 
 .contact-form button {
     display: inline-block;
-    background-color: #ff0000;
-    color: #fff;
+    background-color: var(--gold-crayola);
     padding: 10px 40px; 
-    border-radius: 5px; 
-    text-decoration: none;
+    border-radius: 10px; 
     font-weight: bold;
     font-size: 24px; 
     transition: background-color 0.3s ease;
