@@ -1,8 +1,12 @@
 package com.htw.quickbite.controller;
 
 import com.htw.quickbite.model.Client;
+import com.htw.quickbite.model.Order;
 import com.htw.quickbite.model.Reservation;
+import com.htw.quickbite.repository.OrdersRepository;
 import com.htw.quickbite.service.ClientService;
+import com.htw.quickbite.service.OrdersService;
+import com.htw.quickbite.service.ReservationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,9 +17,13 @@ import java.util.List;
 public class ClientController {
 
     private ClientService clientService;
+    private ReservationService reservationService;
+    private OrdersService ordersService;
    @Autowired
-    public ClientController(ClientService clientService) {
+    public ClientController(ClientService clientService, ReservationService reservationService, OrdersService ordersService) {
         this.clientService = clientService;
+        this.reservationService = reservationService;
+        this.ordersService = ordersService;
     }
 
     @PostMapping(value = "/signin")
@@ -32,9 +40,34 @@ public class ClientController {
     public List<Client> getAllClients(){
        return clientService.getAllClients();
     }
-    @PostMapping(value = "/book")
-    public void bookTable(@RequestBody Reservation reservation){
-       clientService.bookTable(reservation);
+    @PutMapping(value = "/book/{username}/{resID}")
+    public void bookTable(@PathVariable String resID, @PathVariable String username){
+       clientService.bookTable(resID,username);
+    }
+    @PostMapping(value = "create/reservation")
+    public Reservation createReservation(@RequestBody Reservation reservation){
+     return  reservationService.createAvailableRes(reservation);
+
+    }
+    @GetMapping(value = "/reservations")
+    public List<Reservation> getAllReservations(){
+       return reservationService.getAllRes();
+    }
+    @PostMapping(value = "order/create")
+    public void createOrder(@RequestBody Order order){
+       ordersService.createOrder(order);
+    }
+    @DeleteMapping(value = "/order/delete/{orderId}")
+    public void deleteOrder(String orderId){
+       ordersService.deleteOrders(orderId);
+    }
+    @GetMapping("/order/{id}")
+    public Order getOrderById(String id){
+      return ordersService.getOrderById(id);
+    }
+    @GetMapping("/orders")
+    public List<Order> getAllOrders(){
+       return ordersService.getAllOrders();
     }
 
 }

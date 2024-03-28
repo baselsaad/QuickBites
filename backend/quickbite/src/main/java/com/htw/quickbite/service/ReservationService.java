@@ -16,9 +16,14 @@ public class ReservationService {
         this.reservationRepository = reservationRepository;
     }
 
-    public void createAvailableRes(Reservation reservation){
-        reservationRepository.save(reservation);
+    public Reservation createAvailableRes(Reservation reservation){
+       List<Reservation> reservations = reservationRepository.findAll();
+  Reservation res = reservations.stream().filter(a-> a.getTime().equals(reservation.getTime()) && a.getDate().equals(reservation.getDate())).findFirst().orElse(null);
+     if(res == null){
+         reservationRepository.save(reservation);
+     }
 
+      return reservation;
     }
 
     public Reservation getResByTableNr(int tableNr){
