@@ -226,28 +226,14 @@
     
       <div class ="popup">
     
-      <section id="login" style="display:flex; align-items:center; justify-content:center;">
+      <section id="login" >
         
         <link rel="stylesheet" href="css/loginstyle.css">
         <div class="login-page">
             
           <div class="form">
             <img src="public/closebtn.png" alt="close" id="login-close" class="close" >
-            <form id="registerForm" class="register-form" method="POST">
-              <h2>Register</h2>
-              <input id="fullName" type="text" placeholder="Full Name " required/>
-              <input id="username" type="text" placeholder="Username" required/>
-              <input id="email" type="email" placeholder="Email " required/>
-              <input id="password" type="password" placeholder="Password" required/>
-              <button id="register-btn" class="btn" href="#">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                Create
-              </button>
-              <p class="message">Already registered? <a href="#login">Sign In</a></p>
-            </form>
+
             <form id="loginForm" class="login-form">
               <h2 id="login-header"></i> Login</h2>
               <input id="login-username" type="text" placeholder="Username" required />
@@ -261,6 +247,23 @@
               </button>
               <p class="message">Not registered? <a href="#">Create an account</a></p>
             </form>
+
+            <form id="registerForm" class="register-form" method="POST">
+                <h2>Register</h2>
+                <input id="fullName" type="text" placeholder="Full Name " required/>
+                <input id="username" type="text" placeholder="Username" required/>
+                <input id="email" type="email" placeholder="Email " required/>
+                <input id="password" type="password" placeholder="Password" required/>
+                <button id="register-btn" class="btn" href="#">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  Create
+                </button>
+                <p class="message">Already registered? <a href="#">Sign In</a></p>
+              </form>
+
           </div>
         </div>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- download the file -->

@@ -26,7 +26,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   loginLink.addEventListener('click', (event) => {
     document.querySelector('.popup').style.display = 'none';
-    document.body.style.overflow = 'auto'; // enable scrolling
+    document.querySelector('.contact-form').style.display = ''; // better way to fix this ?
+
+    document.body.style.overflow = 'auto'; // disable scrolling
   });
 
 });
