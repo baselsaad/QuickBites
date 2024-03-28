@@ -322,13 +322,7 @@ body.nav-active { overflow: hidden; }
   margin-block-end: 12px;
 }
 
-.section-subtitle::after {
-  content: url('../images/separator.svg');
-  display: block;
-  width: 100px;
-  margin-inline: auto;
-  margin-block-start: 5px;
-}
+
 
 .btn {
   position: relative;
