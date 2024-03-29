@@ -8,6 +8,7 @@
 /* eslint-disable linebreak-style */
 /* eslint-disable no-unused-vars */
 // eslint-disable-next-line no-undef
+
 $('.message a').click(() => {
   $('form').animate({ height: 'toggle', opacity: 'toggle' }, 'slow');
 });
@@ -16,6 +17,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const loginLink = document.getElementById('login-link');
 
   loginLink.addEventListener('click', (event) => {
+    if (g_LoginObject !== null) {
+      event.preventDefault();
+      // display menu for logout and profile
+      
+      return;
+    }
+
     document.querySelector('.popup').style.display = 'flex';
     document.body.style.overflow = 'hidden'; // disable scrolling
   });
@@ -42,7 +50,7 @@ registerForm.addEventListener('submit', async (event) => {
   const clientEmail = document.getElementById('email').value;
   const userPassword = document.getElementById('password').value;
 
-  const user = { clientEmail,username, userPassword };
+  const user = { clientEmail, username, userPassword };
 
   try {
     const response = await fetch('http://localhost:8081/v1/signin', {
@@ -53,7 +61,7 @@ registerForm.addEventListener('submit', async (event) => {
 
     if (response.ok) {
       // Handle successful registration (e.g., success message, redirect)
-     // alert('Registration successful!');
+      // alert('Registration successful!');
       window.location.href = '/login';
     } else {
       const errorData = await response.json();
@@ -66,43 +74,49 @@ registerForm.addEventListener('submit', async (event) => {
 });
 
 //------------------------login------------------------------------
-document.addEventListener('DOMContentLoaded', function() {
-const loginForm = document.getElementById('loginForm');
+document.addEventListener('DOMContentLoaded', function () {
+  const loginForm = document.getElementById('loginForm');
 
-loginForm.addEventListener('submit', async (event) => {
-  event.preventDefault();
+  loginForm.addEventListener('submit', async (event) => {
+    event.preventDefault();
     var username = document.getElementById('login-username').value;
     var password = document.getElementById('login-password').value;
-    
+
     fetch('http://localhost:8081/v1/users/' + username)
-    .then(response => {
+      .then(response => {
         if (!response.ok) {
-            throw new Error('Failed to fetch user data');
+          throw new Error('Failed to fetch user data');
         }
         return response.json();
-    })
-    .then(user => {
+      })
+      .then(user => {
         // Check if user exists and password matches
         if (user && user.userPassword === password) {
-            // Handle successful login
-            console.log('Login successful:', user);
-            document.getElementById('login-link').textContent = user.username;
-            loginForm.style.display = 'none';
-            // Redirect to another page or do whatever you need after successful login
+          // Handle successful login
+          console.log('Login successful:', user);
+          document.getElementById('login-link').textContent = user.username;
+
+          loginForm.style.display = 'none';
+          document.querySelector('.popup').style.display = 'none';
+          document.querySelector('.contact-form').style.display = ''; // better way to fix this ?
+          
+          //localStorage.setItem('g_LoginObject', user);
+          window.g_LoginObject = user;
+
         } else {
-            // Handle invalid username or password
-            console.error('Invalid username or password');
-            alert('Invalid username or password. Please try again.');
+          // Handle invalid username or password
+          console.error('Invalid username or password');
+          alert('Invalid username or password. Please try again.');
         }
-    })
-    .catch(error => {
+      })
+      .catch(error => {
         // Handle login error
         console.error('Login error:', error);
         alert('Login failed. Please try again.');
-    });
+      });
 
 
-});
+  });
 
 });
 

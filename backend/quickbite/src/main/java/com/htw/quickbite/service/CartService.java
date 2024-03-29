@@ -7,6 +7,8 @@ import com.htw.quickbite.repository.OrdersRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class CartService {
     private Cart cart;
@@ -26,12 +28,15 @@ public class CartService {
        return cart;
     }
 
-    public void addOrderToCart(Order order){
+    public void addOrderToCart(List<Order> order){
        Cart cart = createCart();
-       cart.addOrderToCart(order);
-       cartRepository.save(cart);
-       ordersRepository.save(order);
 
+       for (Order newOrder : order){
+           cart.addOrderToCart(newOrder);
+           ordersRepository.save(newOrder);
+       }
+
+       cartRepository.save(cart);
     }
     public void deleteOrderFromCart(String id){
         Cart cart = createCart();

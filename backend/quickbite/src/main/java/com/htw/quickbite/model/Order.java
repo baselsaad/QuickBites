@@ -8,11 +8,15 @@ import jakarta.persistence.*;
 public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
- private String orderId;
+    private String orderId;
     @Column
- private String orderName;
+    private String orderName;
+
+    @Column
+    private int price;
+
     @ManyToOne()
-    @JoinColumn( name = "cartId")
+    @JoinColumn(name = "cartId")
     @JsonIgnore
     private Cart cart;
 

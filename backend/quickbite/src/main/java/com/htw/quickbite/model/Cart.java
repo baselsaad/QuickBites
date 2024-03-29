@@ -40,6 +40,7 @@ public class Cart {
         this.orders = orders;
     }
     public void addOrderToCart(Order order){
+        order.setCart(this);
         this.orders.add(order);
     }
     public void deleteOrderFromCart(String orderId){

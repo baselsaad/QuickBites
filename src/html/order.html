@@ -8,7 +8,6 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <link rel="stylesheet" href="../css/orderstyle.css" />
-        <script src="../js/jquery.min.js"></script>
         <link rel="icon" href="./img/Logo.png" />
         <title>QuickBits Order </title>
     </head>
@@ -37,290 +36,298 @@
         </div>
     
     <body>
-        
-            <div class="clearfix"></div>
-        </div>
-        <div class="maincontent">
-            <div class="container">
-                <section id="menu">
-                
-                    <div class="block menu1">
-                        <div class="buttons-container"> 
-                            <a href="#" class="button button--is-active" data-target="Breakfast">Breakfast</a>
-                            
-                            <a href="#" class="button" data-target="Lunch">Lunch</a>
-                            
-                            <a href="#" class="button" data-target="Drinks">Drinks</a> 
-                            <a href="#" class="button" data-target="Desserts">Desserts</a> 
-                        </div>
-                        
-                        <!-- Start Breakfast Menu -->
-                        <div class="menu menu--is-visible" id="Breakfast" data-aos="fade-up">
-                            <div class="item row align-items-center">
-                                <div class="col-sm-3 pr-5">
-                                    <img class="product-img" src="./img/american_pancakes.webp">
-                                </div>
-                                <div class="details col-sm-9">
-                                    <div class="item__header">
-                                         <h3 class="item__title">Pancake</h3>
- <span class="item__dots"></span>
- <span class="item__price">5€</span>
-                                    </div>
-                                    
-                                    <button class="btn btn-sm btn-outline-primary my-cart-btn"
-                                    data-id="1" data-name="Pancake" data-price="5" data-quantity="1"
-                                    data-image="./img/american_pancakes.webp">Add to cart</button>
-                                </div>
-                            </div>
-                            <div class="item row align-items-center">
-                                <div class="col-sm-3 pr-5">
-                                    <img class="product-img" src="./img/eggs-with-bacon.jpg">
-                                </div>
-                                <div class="details col-sm-9">
-                                    <div class="item__header">
-                                         <h3 class="item__title">Bacon and Eggs</h3>
- <span class="item__dots"></span>
- <span class="item__price">5€</span>
-                                    </div>
-                                    
-                                    <button class="btn btn-sm btn-outline-primary my-cart-btn"
-                                    data-id="2" data-name="Bacon and Eggs" data-price="5" data-quantity="1"
-                                    data-image="./img/eggs-with-bacon.jpg"> Add to cart</button>
-                                </div>
-                            </div>
-                            <div class="item row align-items-center">
-                                <div class="col-sm-3 pr-5">
-                                    <img class="product-img" src="./img/avocado-toast-recipe.png">
-                                </div>
-                                <div class="details col-sm-9">
-                                    <div class="item__header">
-                                         <h3 class="item__title">Avocado Toast</h3>
- <span class="item__dots"></span>
- <span class="item__price">6€</span>
-                                    </div>
-                                   
-                                    <button class="btn btn-sm btn-outline-primary my-cart-btn"
-                                    data-id="3" data-name="Avocado Toast" data-price="6" data-quantity="1"
-                                    data-image="./img/avocado-toast-recipe.png">Add to cart</button>
-                                </div>
-                            </div>
-                            <div class="item row align-items-center">
-                                <div class="col-sm-3 pr-5">
-                                    <img class="product-img" src="./img/high-gluten-flour-bagels-1024x819.jpg">
-                                </div>
-                                <div class="details col-sm-9">
-                                    <div class="item__header">
-                                         <h3 class="item__title">Bagel with Cream Cheese</h3>
- <span class="item__dots"></span>
- <span class="item__price">3€</span>
-                                    </div>
-                                    
-                                    <button class="btn btn-sm btn-outline-primary my-cart-btn"
-                                    data-id="4" data-name="Bagel with Cream Chees" data-price="3" data-quantity="1"
-                                    data-image="./img/high-gluten-flour-bagels-1024x819.jpg">Add to cart</button>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Breakfast Menu -->
 
-                        <!-- Start Lunch Menu -->
-                        
-                         <div class="menu lunch--is-visible" id="Lunch" data-aos="fade-up">
-                            <div class="item row align-items-center">
-                                <div class="col-sm-3 pr-5">
-                                    <img class="product-img" src="./img/food1.jpg">
-                                </div>
-                                <div class="details col-sm-9">
-                                    <div class="item__header">
-                                         <h3 class="item__title">Döner Kebab</h3>
- <span class="item__dots"></span>
- <span class="item__price">7€</span>
-                                    </div>
-                                    
-                                    <button class="btn btn-sm btn-outline-primary my-cart-btn"
-                                    data-id="5" data-name="Döner Kebab" data-price="7" data-quantity="1"
-                                    data-image="./img/food1.jpg">Add to cart</button>
-                                </div>
-                            </div>
-                            <div class="item row align-items-center">
-                                <div class="col-sm-3 pr-5">
-                                    <img class="product-img" src="./img/food2.jpg">
-                                </div>
-                                <div class="details col-sm-9">
-                                    <div class="item__header">
-                                         <h3 class="item__title">Burger with Fries</h3>
- <span class="item__dots"></span>
- <span class="item__price">10€</span>
-                                    </div>
-                                    
-                                    <button class="btn btn-sm btn-outline-primary my-cart-btn"
-                                    data-id="6" data-name="Burger with Fries" data-price="10" data-quantity="1"
-                                    data-image="./img/food2.jpg"> Add to cart</button>
-                                </div>
-                            </div>
-                            <div class="item row align-items-center">
-                                <div class="col-sm-3 pr-5">
-                                    <img class="product-img" src="./img/food3.jpg">
-                                </div>
-                                <div class="details col-sm-9">
-                                    <div class="item__header">
-                                         <h3 class="item__title">Spaghetti</h3>
- <span class="item__dots"></span>
- <span class="item__price">7€</span>
-                                    </div>
-                                   
-                                    <button class="btn btn-sm btn-outline-primary my-cart-btn"
-                                    data-id="7" data-name="Spaghetti" data-price="7" data-quantity="1"
-                                    data-image="./img/food3.jpg">Add to cart</button>
-                                </div>
-                            </div>
-                            <div class="item row align-items-center">
-                                <div class="col-sm-3 pr-5">
-                                    <img class="product-img" src="./img/food4.jpg">
-                                </div>
-                                <div class="details col-sm-9">
-                                    <div class="item__header">
-                                         <h3 class="item__title">Margherita</h3>
- <span class="item__dots"></span>
- <span class="item__price">11€</span>
-                                    </div>
-                                    
-                                    <button class="btn btn-sm btn-outline-primary my-cart-btn"
-                                    data-id="8" data-name="Margherita" data-price="11" data-quantity="1"
-                                    data-image="./img/food4.jpg">Add to cart</button>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Breakfast Menu -->
+        <div class="clearfix"></div>
+</div>
+<div class="maincontent">
+    <div class="container">
+        <section id="menu">
 
-                        <!-- Start Drinks Menu -->
-                        <div class="menu drinks--is-visible" id="Drinks" data-aos="fade-up">
-                            <div class="item row align-items-center">
-                                <div class="col-sm-3 pr-5">
-                                    <img class="product-img" src="./img/Best_Soda.jpg">
-                                </div>
-                                <div class="details col-sm-9">
-                                    <div class="item__header">
-                                         <h3 class="item__title">Soda Drinks</h3>
- <span class="item__dots"></span>
- <span class="item__price">3€</span>
-                                    </div>
-                                    
-                                    <button class="btn btn-sm btn-outline-primary my-cart-btn"
-                                    data-id="9" data-name="Soda Drinks" data-price="3" data-quantity="1"
-                                    data-image="./img/Best_Soda.jpg">Add to cart</button>
-                                </div>
-                            </div>
-                            <div class="item row align-items-center">
-                                <div class="col-sm-3 pr-5">
-                                    <img class="product-img" src="./img/food6.jpg">
-                                </div>
-                                <div class="details col-sm-9">
-                                    <div class="item__header">
-                                         <h3 class="item__title">Fruit cocktail</h3>
- <span class="item__dots"></span>
- <span class="item__price">12€</span>
-                                    </div>
-                                    
-                                    <button class="btn btn-sm btn-outline-primary my-cart-btn"
-                                    data-id="10" data-name="Fruit cocktail" data-price="12" data-quantity="1"
-                                    data-image="./img/food6.jpg"> Add to cart</button>
-                                </div>
-                            </div>
-                            <div class="item row align-items-center">
-                                <div class="col-sm-3 pr-5">
-                                    <img class="product-img" src="./img/Coffee.webp">
-                                </div>
-                                <div class="details col-sm-9">
-                                    <div class="item__header">
-                                         <h3 class="item__title">Caffee your choose</h3>
- <span class="item__dots"></span>
- <span class="item__price">4€</span>
-                                    </div>
-                                    <p class="item__description">Americano, Espresso, Cappuccino, Latte Macchiato, Mokka, 
-                                        Cortado, Espresso Macchiato, Flat White und Caffè Latte,</p>
-                                   
-                                    <button class="btn btn-sm btn-outline-primary my-cart-btn"
-                                    data-id="11" data-name="Caffee" data-price="4" data-quantity="1"
-                                    data-image="./img/Coffee.webp">Add to cart</button>
-                                </div>
-                            </div>
-                            
-                        </div>
+            <div class="block menu1">
+                <div class="buttons-container">
+                    <a href="#" class="button button--is-active" data-target="Breakfast">Breakfast</a>
 
-                        <!-- End Coffee Menu -->
-                        <!-- Start Dessert Menu -->
-                        <div class="menu desserts--is-visible" id="Desserts" data-aos="fade-up">
-                            <div class="item row align-items-center">
-                                <div class="col-sm-3 pr-5">
-                                    <img class="product-img" src="./img/cake1.webp">
-                                </div>
-                                <div class="details col-sm-9">
-                                    <div class="item__header">
-                                         <h3 class="item__title">Cupcake Cherry Muffin</h3>
- <span class="item__dots"></span>
- <span class="item__price">3€</span>
-                                    </div>
-                                    
-                                    <button class="btn btn-sm btn-outline-primary my-cart-btn"
-                                    data-id="12" data-name="Cupcake Cherry Muffin" data-price="3" data-quantity="1"
-                                    data-image="./img/cake1.webp">Add to cart</button>
-                                </div>
-                            </div>
-                            <div class="item row align-items-center">
-                                <div class="col-sm-3 pr-5">
-                                    <img class="product-img" src="./img/donuts.jpg">
-                                </div>
-                                <div class="details col-sm-9">
-                                    <div class="item__header">
-                                         <h3 class="item__title">Donut</h3>
- <span class="item__dots"></span>
- <span class="item__price">2€</span>
-                                    </div>
-                                    
-                                    <button class="btn btn-sm btn-outline-primary my-cart-btn"
-                                    data-id="13" data-name="Donut" data-price="2" data-quantity="1"
-                                    data-image="./img/donuts.jpg"> Add to cart</button>
-                                </div>
-                            </div>
-                            <div class="item row align-items-center">
-                                <div class="col-sm-3 pr-5">
-                                    <img class="product-img" src="./img/cake2.jpg">
-                                </div>
-                                <div class="details col-sm-9">
-                                    <div class="item__header">
-                                         <h3 class="item__title">Cakes (Different types)</h3>
- <span class="item__dots"></span>
- <span class="item__price">3€</span>
-                                    </div>
-                                
-                                    <button class="btn btn-sm btn-outline-primary my-cart-btn"
-                                    data-id="14" data-name="Cakes (Different types)" data-price="3" data-quantity="1"
-                                    data-image="./img/cake2.jpg">Add to cart</button>
-                                </div>
-                            </div>
-                            
+                    <a href="#" class="button" data-target="Lunch">Lunch</a>
+
+                    <a href="#" class="button" data-target="Drinks">Drinks</a>
+                    <a href="#" class="button" data-target="Desserts">Desserts</a>
+                </div>
+
+                <!-- Start Breakfast Menu -->
+                <div class="menu menu--is-visible" id="Breakfast" data-aos="fade-up">
+                    <div class="item row align-items-center">
+                        <div class="col-sm-3 pr-5">
+                            <img class="product-img" src="img/american_pancakes.webp">
                         </div>
-                        <!-- End Noodles Menu -->
+                        <div class="details col-sm-9">
+                            <div class="item__header">
+                                <h3 class="item__title">Pancake</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">5€</span>
+                            </div>
+
+                            <button class="btn btn-sm btn-outline-primary my-cart-btn" data-id="1" data-name="Pancake"
+                                data-price="5" data-quantity="1" data-image="img/american_pancakes.webp">Add to
+                                cart</button>
+                        </div>
                     </div>
-                    <!-- End block -->
-                    <script src="../js/mycart.js"></script>
-                    <script src="../js/mycart-custom.js"></script>
-                </section>
+                    <div class="item row align-items-center">
+                        <div class="col-sm-3 pr-5">
+                            <img class="product-img" src="img/eggs-with-bacon.jpg">
+                        </div>
+                        <div class="details col-sm-9">
+                            <div class="item__header">
+                                <h3 class="item__title">Bacon and Eggs</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">5€</span>
+                            </div>
+
+                            <button class="btn btn-sm btn-outline-primary my-cart-btn" data-id="2"
+                                data-name="Bacon and Eggs" data-price="5" data-quantity="1"
+                                data-image="img/eggs-with-bacon.jpg"> Add to cart</button>
+                        </div>
+                    </div>
+                    <div class="item row align-items-center">
+                        <div class="col-sm-3 pr-5">
+                            <img class="product-img" src="img/avocado-toast-recipe.png">
+                        </div>
+                        <div class="details col-sm-9">
+                            <div class="item__header">
+                                <h3 class="item__title">Avocado Toast</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">6€</span>
+                            </div>
+
+                            <button class="btn btn-sm btn-outline-primary my-cart-btn" data-id="3"
+                                data-name="Avocado Toast" data-price="6" data-quantity="1"
+                                data-image="img/avocado-toast-recipe.png">Add to cart</button>
+                        </div>
+                    </div>
+                    <div class="item row align-items-center">
+                        <div class="col-sm-3 pr-5">
+                            <img class="product-img" src="img/high-gluten-flour-bagels-1024x819.jpg">
+                        </div>
+                        <div class="details col-sm-9">
+                            <div class="item__header">
+                                <h3 class="item__title">Bagel with Cream Cheese</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">3€</span>
+                            </div>
+
+                            <button class="btn btn-sm btn-outline-primary my-cart-btn" data-id="4"
+                                data-name="Bagel with Cream Chees" data-price="3" data-quantity="1"
+                                data-image="img/high-gluten-flour-bagels-1024x819.jpg">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Breakfast Menu -->
+
+                <!-- Start Lunch Menu -->
+
+                <div class="menu lunch--is-visible" id="Lunch" data-aos="fade-up">
+                    <div class="item row align-items-center">
+                        <div class="col-sm-3 pr-5">
+                            <img class="product-img" src="img/food1.jpg">
+                        </div>
+                        <div class="details col-sm-9">
+                            <div class="item__header">
+                                <h3 class="item__title">Döner Kebab</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">7€</span>
+                            </div>
+
+                            <button class="btn btn-sm btn-outline-primary my-cart-btn" data-id="5"
+                                data-name="Döner Kebab" data-price="7" data-quantity="1"
+                                data-image="img/food1.jpg">Add to cart</button>
+                        </div>
+                    </div>
+                    <div class="item row align-items-center">
+                        <div class="col-sm-3 pr-5">
+                            <img class="product-img" src="img/food2.jpg">
+                        </div>
+                        <div class="details col-sm-9">
+                            <div class="item__header">
+                                <h3 class="item__title">Burger with Fries</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">10€</span>
+                            </div>
+
+                            <button class="btn btn-sm btn-outline-primary my-cart-btn" data-id="6"
+                                data-name="Burger with Fries" data-price="10" data-quantity="1"
+                                data-image="img/food2.jpg"> Add to cart</button>
+                        </div>
+                    </div>
+                    <div class="item row align-items-center">
+                        <div class="col-sm-3 pr-5">
+                            <img class="product-img" src="img/food3.jpg">
+                        </div>
+                        <div class="details col-sm-9">
+                            <div class="item__header">
+                                <h3 class="item__title">Spaghetti</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">7€</span>
+                            </div>
+
+                            <button class="btn btn-sm btn-outline-primary my-cart-btn" data-id="7" data-name="Spaghetti"
+                                data-price="7" data-quantity="1" data-image="./img/food3.jpg">Add to cart</button>
+                        </div>
+                    </div>
+                    <div class="item row align-items-center">
+                        <div class="col-sm-3 pr-5">
+                            <img class="product-img" src="./img/food4.jpg">
+                        </div>
+                        <div class="details col-sm-9">
+                            <div class="item__header">
+                                <h3 class="item__title">Margherita</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">11€</span>
+                            </div>
+
+                            <button class="btn btn-sm btn-outline-primary my-cart-btn" data-id="8"
+                                data-name="Margherita" data-price="11" data-quantity="1"
+                                data-image="./img/food4.jpg">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Breakfast Menu -->
+
+                <!-- Start Drinks Menu -->
+                <div class="menu drinks--is-visible" id="Drinks" data-aos="fade-up">
+                    <div class="item row align-items-center">
+                        <div class="col-sm-3 pr-5">
+                            <img class="product-img" src="./img/Best_Soda.jpg">
+                        </div>
+                        <div class="details col-sm-9">
+                            <div class="item__header">
+                                <h3 class="item__title">Soda Drinks</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">3€</span>
+                            </div>
+
+                            <button class="btn btn-sm btn-outline-primary my-cart-btn" data-id="9"
+                                data-name="Soda Drinks" data-price="3" data-quantity="1"
+                                data-image="./img/Best_Soda.jpg">Add to cart</button>
+                        </div>
+                    </div>
+                    <div class="item row align-items-center">
+                        <div class="col-sm-3 pr-5">
+                            <img class="product-img" src="./img/food6.jpg">
+                        </div>
+                        <div class="details col-sm-9">
+                            <div class="item__header">
+                                <h3 class="item__title">Fruit cocktail</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">12€</span>
+                            </div>
+
+                            <button class="btn btn-sm btn-outline-primary my-cart-btn" data-id="10"
+                                data-name="Fruit cocktail" data-price="12" data-quantity="1"
+                                data-image="./img/food6.jpg"> Add to cart</button>
+                        </div>
+                    </div>
+                    <div class="item row align-items-center">
+                        <div class="col-sm-3 pr-5">
+                            <img class="product-img" src="./img/Coffee.webp">
+                        </div>
+                        <div class="details col-sm-9">
+                            <div class="item__header">
+                                <h3 class="item__title">Caffee your choose</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">4€</span>
+                            </div>
+                            <p class="item__description">Americano, Espresso, Cappuccino, Latte Macchiato, Mokka,
+                                Cortado, Espresso Macchiato, Flat White und Caffè Latte,</p>
+
+                            <button class="btn btn-sm btn-outline-primary my-cart-btn" data-id="11" data-name="Caffee"
+                                data-price="4" data-quantity="1" data-image="./img/Coffee.webp">Add to cart</button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- End Coffee Menu -->
+                <!-- Start Dessert Menu -->
+                <div class="menu desserts--is-visible" id="Desserts" data-aos="fade-up">
+                    <div class="item row align-items-center">
+                        <div class="col-sm-3 pr-5">
+                            <img class="product-img" src="./img/cake1.webp">
+                        </div>
+                        <div class="details col-sm-9">
+                            <div class="item__header">
+                                <h3 class="item__title">Cupcake Cherry Muffin</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">3€</span>
+                            </div>
+
+                            <button class="btn btn-sm btn-outline-primary my-cart-btn" data-id="12"
+                                data-name="Cupcake Cherry Muffin" data-price="3" data-quantity="1"
+                                data-image="./img/cake1.webp">Add to cart</button>
+                        </div>
+                    </div>
+                    <div class="item row align-items-center">
+                        <div class="col-sm-3 pr-5">
+                            <img class="product-img" src="./img/donuts.jpg">
+                        </div>
+                        <div class="details col-sm-9">
+                            <div class="item__header">
+                                <h3 class="item__title">Donut</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">2€</span>
+                            </div>
+
+                            <button class="btn btn-sm btn-outline-primary my-cart-btn" data-id="13" data-name="Donut"
+                                data-price="2" data-quantity="1" data-image="./img/donuts.jpg"> Add to cart</button>
+                        </div>
+                    </div>
+                    <div class="item row align-items-center">
+                        <div class="col-sm-3 pr-5">
+                            <img class="product-img" src="./img/cake2.jpg">
+                        </div>
+                        <div class="details col-sm-9">
+                            <div class="item__header">
+                                <h3 class="item__title">Cakes (Different types)</h3>
+                                <span class="item__dots"></span>
+                                <span class="item__price">3€</span>
+                            </div>
+
+                            <button class="btn btn-sm btn-outline-primary my-cart-btn" data-id="14"
+                                data-name="Cakes (Different types)" data-price="3" data-quantity="1"
+                                data-image="./img/cake2.jpg">Add to cart</button>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- End Noodles Menu -->
             </div>
-        </div>
-        <div class="nav-item my-cart-icon">
-            <img src="./img/cart.svg" style="width:20px;"> <span class="badge badge-notify my-cart-badge"> </span>
-        </div>
-        <footer class="block footer1 footer text-center">
-            <p>&copy; <a href="">"QuickBites"</a>order your favorite food - developed by <a href="https://github.com/baselsaad/QuickBites">"HTW STUDENTS"</a></p>
-        </footer>
-        <script src="../js/bootstrap.min.js"></script>
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <script>
-            AOS.init();
-        </script>
-        <script src="../js/custom-general.js"></script>
-    </body>
+            <!-- End block -->
+
+        </section>
+    </div>
+</div>
+<div class="nav-item my-cart-icon">
+    <img src="./img/cart.svg" style="width:20px;"> <span class="badge badge-notify my-cart-badge"> </span>
+</div>
+<footer class="block footer1 footer text-center">
+    <p>&copy; <a href="">"QuickBites"</a>order your favorite food - developed by <a
+            href="https://github.com/baselsaad/QuickBites">"HTW STUDENTS"</a></p>
+</footer>
+
+
+
+<!-- Include jQuery and Bootstrap JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script src="../js/custom-general.js"></script>
+<script src="../js/mycart.js"></script>
+<script src="../js/mycart-custom.js"></script>
+</body>
 
 </html>

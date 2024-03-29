@@ -73,8 +73,8 @@ public class ClientController {
        return ordersService.getAllOrders();
     }
     @PostMapping(value = "/add/cart")
-    public void addOrderToCart(@RequestBody Order order){
-       cartService.addOrderToCart(order);
+    public void addOrderToCart(@RequestBody List<Order> orders){
+       cartService.addOrderToCart(orders);
     }
 
     @DeleteMapping(value = "/delete/cart/order-id/{id}")
