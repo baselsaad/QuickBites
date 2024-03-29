@@ -148,6 +148,12 @@ a {
   text-decoration: none;
 }
 
+li a {
+  color: var(--gold-crayola); /* Sets the text color */
+  text-decoration: none; 
+  font-size: 24px; 
+}
+
 img { height: auto; }
 
 input,
