@@ -85,9 +85,8 @@
               </p>
 
               <div class="input-wrapper">
-                <input type="text" name="name" placeholder="Your Name" autocomplete="off" class="input-field">
-
-                <input type="tel" name="phone" placeholder="Phone Number" autocomplete="off" class="input-field">
+                <input id="userNameInput" type="text" name="name" placeholder="User Name" autocomplete="off" class="input-field">
+                <input id="emailInput" type="tel" name="email" placeholder="Email" autocomplete="off" class="input-field">
               </div>
 
               <div class="input-wrapper">
@@ -111,7 +110,7 @@
                 <div class="icon-wrapper">
                   <ion-icon name="calendar-clear-outline" aria-hidden="true"></ion-icon>
 
-                  <input type="date" name="reservation-date" class="input-field">
+                  <input id="date" type="date" name="reservation-date" class="input-field">
 
                   <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
                 </div>
@@ -119,7 +118,7 @@
                 <div class="icon-wrapper">
                   <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
 
-                  <select name="person" class="input-field">
+                  <select id="time" name="person" class="input-field">
                     <option value="08:00am">08 : 00 am</option>
                     <option value="09:00am">09 : 00 am</option>
                     <option value="010:00am">10 : 00 am</option>
@@ -144,7 +143,7 @@
 
               <textarea name="message" placeholder="Message" autocomplete="off" class="input-field"></textarea>
 
-              <button type="submit" class="btn btn-secondary">
+              <button id="bookTableButton" type="button" class="btn btn-secondary">
                 <span class="text text-1">Book A Table</span>
 
                 <span class="text text-2" aria-hidden="true">Book A Table</span>
@@ -164,7 +163,7 @@
   <!-- 
     - custom js link
   -->
-  <!-- <script src="./assets/js/script.js"></script> -->
+  <script src="../js/reservation.js"></script> 
 
   <!-- 
     - ionicon link
