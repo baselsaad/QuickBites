@@ -78,7 +78,7 @@ public class ClientController {
     }
 
     @DeleteMapping(value = "/delete/cart/order-id/{id}")
-    public void deleteOrderFromCart(String id){
+    public void deleteOrderFromCart(@PathVariable String id){
         cartService.deleteOrderFromCart(id);
     }
 
