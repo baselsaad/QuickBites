@@ -304,6 +304,7 @@
         return {
           orderName: product.name,
           price: product.price,
+          quantity: product.quantity,
         };
       });
 

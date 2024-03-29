@@ -11,18 +11,22 @@ public class Order {
     private String orderId;
     @Column
     private String orderName;
+    @Column
+    private Double price;
 
     @Column
-    private int price;
+    private Integer quantity;
 
     @ManyToOne()
     @JoinColumn(name = "cartId")
     @JsonIgnore
     private Cart cart;
 
-    public Order(String orderId, String orderName) {
+    public Order(String orderId, String orderName, Double price, Integer quantity) {
         this.orderId = orderId;
         this.orderName = orderName;
+        this.price = price;
+        this.quantity = quantity;
     }
 
     public Order() {
@@ -51,5 +55,21 @@ public class Order {
 
     public void setOrderName(String orderName) {
         this.orderName = orderName;
+    }
+
+    public Double getPrice() {
+        return price;
+    }
+
+    public void setPrice(Double price) {
+        this.price = price;
+    }
+
+    public Integer getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(Integer quantity) {
+        this.quantity = quantity;
     }
 }
