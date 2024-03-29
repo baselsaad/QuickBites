@@ -4,6 +4,7 @@ import com.htw.quickbite.model.Client;
 import com.htw.quickbite.model.Order;
 import com.htw.quickbite.model.Reservation;
 import com.htw.quickbite.repository.OrdersRepository;
+import com.htw.quickbite.service.CartService;
 import com.htw.quickbite.service.ClientService;
 import com.htw.quickbite.service.OrdersService;
 import com.htw.quickbite.service.ReservationService;
@@ -19,11 +20,13 @@ public class ClientController {
     private ClientService clientService;
     private ReservationService reservationService;
     private OrdersService ordersService;
+    private CartService cartService;
    @Autowired
-    public ClientController(ClientService clientService, ReservationService reservationService, OrdersService ordersService) {
+    public ClientController(ClientService clientService, ReservationService reservationService, OrdersService ordersService, CartService cartService) {
         this.clientService = clientService;
         this.reservationService = reservationService;
         this.ordersService = ordersService;
+        this.cartService = cartService;
     }
 
     @PostMapping(value = "/signin")
@@ -69,5 +72,15 @@ public class ClientController {
     public List<Order> getAllOrders(){
        return ordersService.getAllOrders();
     }
+    @PostMapping(value = "/add/cart")
+    public void addOrderToCart(@RequestBody Order order){
+       cartService.addOrderToCart(order);
+    }
+
+    @DeleteMapping(value = "/delete/cart/order-id/{id}")
+    public void deleteOrderFromCart(String id){
+        cartService.deleteOrderFromCart(id);
+    }
+
 
 }

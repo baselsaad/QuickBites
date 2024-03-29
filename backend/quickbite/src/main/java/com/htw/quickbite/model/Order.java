@@ -1,19 +1,24 @@
 package com.htw.quickbite.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 @Table
-@Entity
+@Entity(name = "order-table")
 public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
  private String orderId;
     @Column
  private String orderName;
+    @ManyToOne()
+    @JoinColumn( name = "cartId")
+    @JsonIgnore
+    private Cart cart;
 
-    public Order(String orderId, String orders) {
+    public Order(String orderId, String orderName) {
         this.orderId = orderId;
-        this.orderName = orders;
+        this.orderName = orderName;
     }
 
     public Order() {
@@ -28,11 +33,19 @@ public class Order {
         this.orderId = orderId;
     }
 
-    public String getOrders() {
+    public Cart getCart() {
+        return cart;
+    }
+
+    public void setCart(Cart cart) {
+        this.cart = cart;
+    }
+
+    public String getOrderName() {
         return orderName;
     }
 
-    public void setOrders(String orders) {
-        this.orderName = orders;
+    public void setOrderName(String orderName) {
+        this.orderName = orderName;
     }
 }
