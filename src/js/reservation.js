@@ -65,7 +65,7 @@ reservationForm.addEventListener('click', async (event) => {
 
       if (response.ok) {
         // Handle successful registration (e.g., success message, redirect)
-        // alert('Registration successful!');
+        alert('Reservation sent via email!');
         // window.location.href = '/login';
         //return response.json();
       } else {
