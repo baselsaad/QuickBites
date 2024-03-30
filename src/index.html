@@ -14,8 +14,17 @@
 </head>
 
 <body>
+
   <header class="header">
     <nav class="navbar">
+
+      <div class="dropdown" id="dropdown" style="display: none;" >
+        <button class="dropbtn" id="profile-link">Profile</button>
+        <div class="dropdown-content">
+          <a id="logout-link" href="#">Logout</a>
+        </div>
+      </div>
+
       <div class="navbar-container">
         <input type="checkbox" name="" id="">
         <div class="hamburger-lines">
@@ -27,10 +36,10 @@
         <ul class="menu-items">
           <li><a href="#home-container">Home</a></li>
           <li><a href="html/order.html" class="orderLink">Menu</a></li>
-          <li><a href="html/reservation.html">Reservations</a></li>
+          <li><a href="html/reservation.html" class="reservationLink">Reservations</a></li>
           <li><a href="#gallery">Gallery</a></li>
           <li><a href="#contact">Contact</a></li>
-          <li><a href="#" id="login-link">Login</a></li>
+          <li><a href="#" id="login-link" >Login</a></li>
 
         </ul>
 
@@ -48,7 +57,7 @@
 
           Relish the Speedy, Wholesome Delights at QuickBites.</p>
         <p>Savor the Flavor at QuickBites</p>
-        <a href="html/reservation.html">
+        <a href="html/reservation.html" class="reservationLink">
           <button id="BOOK">reserve your table now!</button>
         </a>
       </div>
@@ -234,7 +243,7 @@
       <nav class="footer-links">
         <a href="#">Home</a>
         <a href="html/order.html" class="orderLink">Menu</a>
-        <a href="html/reservation.html">Reservations</a>
+        <a href="html/reservation.html" class="reservationLink">Reservations</a>
         <a href="#gallery">Gallery</a>
         <a href="#contact">Contact</a>
       </nav>

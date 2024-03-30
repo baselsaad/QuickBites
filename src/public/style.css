@@ -1063,3 +1063,53 @@ button, input, optgroup, select, textarea {
       font-size: 15px;
     }
   }
+
+  /* CSS for dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  background-color: #000000;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #000000;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #FFE88D;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #242323;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* CSS for menu items */
+.menu-items {
+  list-style-type: none;
+  padding: 0;
+}
+
+.menu-items li {
+  display: inline;
+  margin-right: 10px;
+}
+
+.dropdown .dropbtn {
+  background-color: #242323; 
+  color: #FFE88D;
+
+  border: none; /* Remove button border */
+  outline: none; /* Remove button outline */
+}

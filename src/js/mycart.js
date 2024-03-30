@@ -300,7 +300,6 @@
 
       // send data to server
       var orders = products.map(function (product) {
-        // Map each product to an Order object
         return {
           orderName: product.name,
           price: product.price,

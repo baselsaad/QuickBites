@@ -16,17 +16,12 @@ $('.message a').click(() => {
 document.addEventListener('DOMContentLoaded', () => {
   const loginLink = document.getElementById('login-link');
 
-  loginLink.addEventListener('click', (event) => {
-    if (g_LoginObject !== null) {
-      event.preventDefault();
-      // display menu for logout and profile
-      
-      return;
-    }
-
-    document.querySelector('.popup').style.display = 'flex';
-    document.body.style.overflow = 'hidden'; // disable scrolling
-  });
+  if (loginLink !== null) {
+    loginLink.addEventListener('click', (event) => {
+      document.querySelector('.popup').style.display = 'flex';
+      document.body.style.overflow = 'hidden'; // disable scrolling
+    });
+  }
 });
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -96,12 +91,34 @@ document.addEventListener('DOMContentLoaded', function () {
           console.log('Login successful:', user);
           document.getElementById('login-link').textContent = user.username;
 
+          // save the user object in local storage
+          localStorage.setItem('g_LoginObject', JSON.stringify(user)); // (it is not the best and secure way)
+          window.g_LoginObject = user;
+
           loginForm.style.display = 'none';
+          document.body.style.overflow = 'auto'; // disable scrolling
           document.querySelector('.popup').style.display = 'none';
           document.querySelector('.contact-form').style.display = ''; // better way to fix this ?
-          
-          //localStorage.setItem('g_LoginObject', user);
-          window.g_LoginObject = user;
+
+          // Create the dropdown
+          var loginLinkRect = document.getElementById('login-link').getBoundingClientRect();
+          var dropdown = document.getElementById('dropdown').cloneNode(true);
+          dropdown.style.display = 'block'; // Show 
+          dropdown.style.position = 'absolute';
+          dropdown.style.top = loginLinkRect.top + 'px';
+          dropdown.style.left = loginLinkRect.left + 'px';
+
+          // Append the dropdown to the document body
+          document.body.appendChild(dropdown);
+
+          // Add a click event listener to the Logout link
+          document.addEventListener('click', function (event) {
+            if (event.target && event.target.id === 'logout-link') {
+              localStorage.removeItem('g_LoginObject');
+              window.g_LoginObject = null;
+              window.location.reload();
+            }
+          });
 
         } else {
           // Handle invalid username or password
